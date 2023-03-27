@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Trang index */
+.header1{
+    display: flex;
+    background-color: rgb(215, 9, 112);
+    color: white;
+    
+}
+.header1 h2{
+    font-size: 50px;
+    font-variant: small-caps;
+}
+.header2{
+    width: 100%;
+    text-align: center;
+    
+}
+.header2 a{
+    text-decoration: none;
+    padding: 20px;
+    font-size: larger;
+    font-variant: small-caps;
+    color: white;
+}
+.header2 a:hover{
+    color:blueviolet;
+}
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+.menu>ul>li>a{
+    display: block;
+}
+.menu>ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}.menu>ul>li>ul{
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 3px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 0 1px gray;
+}
+.menu>ul>li>ul>li>a{
+    display: block;
+    line-height: 30px;
+    color: rgb(215, 9, 112);
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: larger;
+    padding: 0 10px;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu>ul>li>ul>li>a:hover{
+    background-color: rgb(215, 9, 112);
+    color: white;
+}
+.bg-img{
+    background-image: url('img/slideshow_1.webp');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 480px;
+    background-size: contain;
+}
+.div-icon{
+    display: flex;
+
+}
+.div-icon .icon{
+    margin: 10px;
+    padding-left: 10px;
+}
+.tieude{
+    text-align: center;
+    padding: 30px ;
+    display: block;
+}
+.tieude h1{
+    font-variant: small-caps ;
+    
+}
+.col-25{
+    width: 25%;
+    float: left;
+    padding-bottom: 30px;
+}
+.prod{
+    border-radius: 10px;
+    box-shadow:  0 0 5px gray;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    
+    
+}
+
+.prod:hover .btn-cart{
+    visibility: visible;
+}
+.prod .img-item{
+    overflow: hidden;
+    position: relative;
+}
+.prod .img-item .overplay{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.prod:hover .overplay{
+    background-color: rgba(0,0,0, 0.4);
+}
+.btn-cart{
+    border: 3px solid white;
+    border-radius: 3px;
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    padding: 20px;
+    font-weight: bolder;
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    visibility: hidden;
+    transition: .3s ease box-shadow;
+    
+}
+.btn-cart:hover{
+    box-shadow: 0 0 15px 3px white inset;
+}
+
+.img-item img{
+    max-width: 100%;
+}
+.prod:hover img{
+    transform:scale(1.2);
+    transition: .5s ease ;
+}
+
+/* Sản phẩm  */
+.sp-container{
+    display: flex;
+    
+}
+.sp-img img{
+    width: 100%;
+    
+}
+.sp-noidung{
+    padding: 10px;
+    
+}
+.sp-noidung p{
+    font-size: 20px;
+
+}
+.sp-btn {
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    font-variant: small-caps;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    background: #ef4c75;
+    color: white;
+    outline: none;
+    overflow: hidden;
+    border-radius: 100px;
+    border: none;
+    margin-bottom: 30px;
+}
+.sp-btn span{
+    position: relative;
+}
+
+  .sp-btn::before {
+    --size: 0;
+
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, #05f71d, transparent);
+    transform: translate(-50%, -50%);
+    transition: width .2s ease, height .2s ease;
+  }
+  
+  .sp-btn:hover::before {
+    --size: 800px;
+  }
+  #soLuongMua{
+    display: flex;
+    padding-bottom: 10px;
+  }
+ #soLuongMua button{
+    width: 40px;
+    height: 40px;
+    outline: none;
+    background:none;
+    border: 1px solid #ececec;
+    cursor: pointer;
+}
+#soLuongMua button:hover{
+    background-color: #ef4c75;
+}
+#soLuongMua button svg{
+    color :#909090;
+}
+#soLuongMua button:hover svg{
+    color: pink;
+}
+#soLuongMua #soLuong{
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ececec;
+}
+/* Trang Register */
+
+.register-body{
+    width: 100%;
+    height: 100%;
+    background-position:  center;
+    padding-top: 80px;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('./img/item2.webp');
+    background-size: cover;
+          
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: white;
+    padding: 5px;
+    overflow: hidden;
+}
+.button-box{
+    width : 230px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow : 0 0 20px 9px rgb(208, 8, 8);
+    border-radius: 30px;
+
+}
+.toggle-btn{
+    padding : 10px 34px;
+    cursor : pointer;
+    background : transparent;
+    border : 0;
+    outline : none;
+    position : relative;
+}
+#btn{
+    top : 0;
+    left: 0;
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(to right,#eb0d57,rgba(242, 119, 5, 0.867));
+    border-radius: 30px;
+    transition: .5s;
+}
+.social-icon{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icon img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow:  0 0 20px 0 #7f7f7f3d ;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right,#eb0d57,rgba(242, 119, 5, 0.867));
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+input>span{
+color: #777;
+font-size: 12px;
+bottom: 68px;
+position: absolute;
+}
+.form-box-btn{
+    background: none;
+    border: none;
+    font-variant: small-caps;
+}
+#login{
+    left: 50px;
+}
+#register{
+    left: 450px;
+}
+
+
